@@ -83,3 +83,11 @@ def sumar_cartas(cartas,baraja_original):
         else:
             acum=acum+11
     return acum
+
+#Punto 18
+
+def mostrar(cartas,total,tp_jugador):
+    print("╔═══════════════════════════════════════════╗")
+    print("  El {} posee el siguiente mazo:".format(tp_jugador))
+    print(" ",cartas,"\n  Acumulado: ",total)
+    print("╚═══════════════════════════════════════════╝")
