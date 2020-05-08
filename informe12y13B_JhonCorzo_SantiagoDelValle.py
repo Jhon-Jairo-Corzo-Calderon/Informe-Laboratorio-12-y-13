@@ -21,3 +21,18 @@ def combinar(dicc,lista):
     return baraja
 
 baraja = combinar(ponderado,simbolos)
+
+#Punto 14
+
+from random import randint
+
+def revolver(diccionario):
+    dic_new=[]
+    for llave in diccionario:
+        valor=diccionario.get(llave)
+        indice=randint(0,20)
+        dic_new.insert(indice,(llave,valor))
+    dic_new=dict(dic_new)
+    return dic_new
+
+baraja = revolver(baraja)
