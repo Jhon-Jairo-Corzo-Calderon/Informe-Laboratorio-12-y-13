@@ -36,3 +36,8 @@ def revolver(diccionario):
     return dic_new
 
 baraja = revolver(baraja)
+
+#Punto 15
+
+cartas_jugador=[]
+cartas_tallador=[]
