@@ -7,3 +7,17 @@ ponderado = {"A":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"J":1
 #Punto 12
 
 simbolos=["♥","♦","♣","♠"]
+
+#Punto 13
+
+def combinar(dicc,lista):
+    baraja={}
+    cont=1
+    for valor in dicc:
+        for i in lista:
+            baraja.setdefault(valor+" "+i,cont)
+        if cont<10:
+            cont+=1
+    return baraja
+
+baraja = combinar(ponderado,simbolos)
