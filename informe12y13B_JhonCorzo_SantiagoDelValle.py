@@ -64,3 +64,22 @@ def repartir(baraja,cartas):
         nbaraja[llaves[i]]=valores[i]
     return nbaraja
     return cartas
+
+#Punto 17
+
+def sumar_cartas(cartas,baraja_original):
+    acum=0
+    ases=False
+    for i in baraja_original:
+        for x in range(len(cartas)):
+            if "A" == cartas[x][0]:
+                ases=True
+            elif i==cartas[x]:
+                acum=acum+baraja_original.get(i)
+            
+    if ases:
+        if (acum+11)>=22:
+            acum=1+acum
+        else:
+            acum=acum+11
+    return acum
