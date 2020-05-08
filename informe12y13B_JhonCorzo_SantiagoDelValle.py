@@ -41,3 +41,26 @@ baraja = revolver(baraja)
 
 cartas_jugador=[]
 cartas_tallador=[]
+
+#Punto 16
+
+baraja_original=baraja.copy()
+
+def repartir(baraja,cartas):
+    llaves=[f for f in baraja]
+    valores=[baraja[f] for f in baraja]
+    nbaraja={}
+    if len(cartas)==0:
+        for i in range(2):
+            indice=randint(0,len(llaves)-1)
+            cartas.append(llaves.pop(indice))
+            valores.pop(indice)
+    else:
+        indice=randint(0,len(llaves)-1)
+        cartas.append(llaves.pop(indice))
+        valores.pop(indice)
+    
+    for i in range(len(llaves)):
+        nbaraja[llaves[i]]=valores[i]
+    return nbaraja
+    return cartas
